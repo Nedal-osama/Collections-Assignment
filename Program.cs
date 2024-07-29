@@ -36,31 +36,62 @@ namespace Collections_Assignment
 
 
             #region EvenNumber
-        /*    List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6 };
-            List<int> evenNumbers = GetEvenNumbers(numbers);
+            /*    List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6 };
+                List<int> evenNumbers = GetEvenNumbers(numbers);
 
-            foreach (var num in evenNumbers)
-            {
-                Console.WriteLine(num);
-            }
-
-        }
-
-        private static List<int> GetEvenNumbers(List<int> numbers)
-        {
-            List<int> evenNumbers = new List<int>();
-
-            foreach (int number in numbers)
-            {
-                if (number % 2 == 0)
+                foreach (var num in evenNumbers)
                 {
-                    evenNumbers.Add(number);
+                    Console.WriteLine(num);
                 }
+
             }
 
-            return evenNumbers;
-        */
-        #endregion
-    } 
+            private static List<int> GetEvenNumbers(List<int> numbers)
+            {
+                List<int> evenNumbers = new List<int>();
+
+                foreach (int number in numbers)
+                {
+                    if (number % 2 == 0)
+                    {
+                        evenNumbers.Add(number);
+                    }
+                }
+
+                return evenNumbers;
+            */
+            #endregion
+            #region FixedSizeList
+        /*    FixedSizeList<int> fixedList = new FixedSizeList<int>(3);
+
+            try
+            {
+                fixedList.Add(1);
+                fixedList.Add(2);
+                fixedList.Add(3);
+
+                fixedList.Add(4);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            try
+            {
+                for (int i = 0; i < fixedList.Count; i++)
+                {
+                    Console.WriteLine(fixedList.Get(i));
+                }
+
+                Console.WriteLine(fixedList.Get(3));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }*/
+            #endregion
+
+        } 
     }
 }
