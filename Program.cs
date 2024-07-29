@@ -97,7 +97,7 @@ namespace Collections_Assignment
             string str = "nedal";
             int index = FindFirstNonRepeatedCharacter(str);
             Console.WriteLine("Index of first non-repeated character: " + index);
-            #endregion
+           
         }
 
         private static int FindFirstNonRepeatedCharacter(string str)
@@ -130,5 +130,6 @@ namespace Collections_Assignment
             return -1;
         
            }
+         #endregion
     }
 }
