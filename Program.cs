@@ -130,6 +130,9 @@ namespace Collections_Assignment
             return -1;
         
            }
+        //Th uses a dictionary to count  of each character in the input string.
+        //Then, it iterates over the string again to find the first character that has a count of 1
+        // which is the first non-repeated character. If no such character is found, it returns -1
          #endregion
     }
 }
