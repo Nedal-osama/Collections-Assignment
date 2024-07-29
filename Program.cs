@@ -62,36 +62,73 @@ namespace Collections_Assignment
             */
             #endregion
             #region FixedSizeList
-        /*    FixedSizeList<int> fixedList = new FixedSizeList<int>(3);
+            /*    FixedSizeList<int> fixedList = new FixedSizeList<int>(3);
 
-            try
-            {
-                fixedList.Add(1);
-                fixedList.Add(2);
-                fixedList.Add(3);
-
-                fixedList.Add(4);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            try
-            {
-                for (int i = 0; i < fixedList.Count; i++)
+                try
                 {
-                    Console.WriteLine(fixedList.Get(i));
+                    fixedList.Add(1);
+                    fixedList.Add(2);
+                    fixedList.Add(3);
+
+                    fixedList.Add(4);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
 
-                Console.WriteLine(fixedList.Get(3));
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }*/
+                try
+                {
+                    for (int i = 0; i < fixedList.Count; i++)
+                    {
+                        Console.WriteLine(fixedList.Get(i));
+                    }
+
+                    Console.WriteLine(fixedList.Get(3));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }*/
             #endregion
 
-        } 
+
+            #region FirstNonRepeatedCharacter
+            string str = "nedal";
+            int index = FindFirstNonRepeatedCharacter(str);
+            Console.WriteLine("Index of first non-repeated character: " + index);
+            #endregion
+        }
+
+        private static int FindFirstNonRepeatedCharacter(string str)
+        {
+            Dictionary<char, int> charCount = new Dictionary<char, int>();
+            Dictionary<char, int> charIndex = new Dictionary<char, int>();
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                char c = str[i];
+                if (charCount.ContainsKey(c))
+                {
+                    charCount[c]++;
+                }
+                else
+                {
+                    charCount[c] = 1;
+                    charIndex[c] = i;
+                }
+            }
+
+            foreach (var kvp in charCount)
+            {
+                if (kvp.Value == 1)
+                {
+                    return charIndex[kvp.Key];
+                }
+            }
+
+            return -1;
+        
+           }
     }
 }
